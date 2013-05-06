@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Kudler Fine Foods Gourmet & Specialty Food Stores | Home</title> 
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    <script src="js/mainscript.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //initialize the slideshow for the first time
+            resizeSlideshow();
+
+            //initialize the slideshow when the user rotates their phone between landscape and portrait view 
+            $(window).on("orientationchange", function (event) {
+                resizeSlideshow();
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+
+        // Wait for Cordova to load
+        // 
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is loaded and it is now safe to make calls Cordova methods
+        //
+        function onDeviceReady() {
+            checkConnection();
+        }
+
+        
+    </script>
+
+</head> 
+<body> 
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<div data-role="page" id="page-home">
+
+	<!--HEADER HEADER HEADER-->
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#page-home" data-icon="home" data-transition="fade">Home</a></li>
+                <li><a href="#page-info" data-icon="info" data-transition="fade">Info</a></li>
+                <li><a href="#page-products" data-icon="arrow-r" data-transition="fade">Products</a></li>
+            </ul>
+        </div>
+	</div>
+    <!--HEADER HEADER HEADER-->
+
+    <!--CONTENT CONTENT CONTENT-->
+	<div data-role="content">	
+		
+        <div class="masthead" style="">
+            <img src="images/masthead.jpg" class="Image-Logo" alt="Kudler Fine Foods" title="Kudler Fine Foods" />
+        </div>
+
+        <!--When viewing this slideshow in a browser, the images will appear to be too wide if there is enough content            on the page to create a scrollbar.  On a mobile device the scrollbar does not force the content to resize             because it overlays itself on top of the content.-->        <!--<div id="slideshow1">             <img src="images/wine3.jpg" alt="Kudler Fine Foods" title="Kudler Fine Foods" class="active" />             <img src="images/cooking1.jpg" alt="Kudler Fine Foods" title="Kudler Fine Foods" />             <img src="images/cooking2.jpg" alt="Kudler Fine Foods" title="Kudler Fine Foods" />             <img src="images/cooking3.jpg" alt="Kudler Fine Foods" title="Kudler Fine Foods" />             <img src="images/cooking4.jpg" alt="Kudler Fine Foods" title="Kudler Fine Foods" />             <img src="images/cooking5.jpg" alt="Kudler Fine Foods" title="Kudler Fine Foods" />             <img src="images/cooking6.jpg" alt="Kudler Fine Foods" title="Kudler Fine Foods" />         </div>-->
+        
+        <div class="standard-content">
+            <p>We have traveled the world to bring you an extensive collection of domestic and imported wines and spirits.</p>
+            <img src="images/wine1.jpg" id="wine1" alt="Domestic & Imported Wines!" title="Domestic & Imported Wines!" />
+            <p>Whether you want to mix the quintessential martini or find the perfect wine to serve at your next dinner party, Kudler's is the place to shop. You will find that our stores carry a wide variety of spirits and at prices that will meet any budget.</p>
+            <p>While we are proud of our wide selection, we certainly don’t want our customers to be intimidated, so each of our stores has a Wine Steward who will be more than happy to assist you in making your selection. We also hold monthly wine appreciation classes so you can learn the nuances of our wines.</p>
+        </div>
+        
+	</div>
+    <!--CONTENT CONTENT CONTENT-->
+
+    <!--FOOTER FOOTER FOOTER-->
+    <div data-role="footer" data-position="fixed">
+	    <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#page-news" data-transition="slide">News</a></li>
+                <li><a href="#page-about" data-transition="slide">About</a></li>
+                <li><a href="#page-locations" data-transition="slide">Locations</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--FOOTER FOOTER FOOTER-->
+
+</div><!-- /page -->
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<div data-role="page" id="page-info">
+
+	<!--HEADER HEADER HEADER-->
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#page-home" data-icon="home" data-transition="fade">Home</a></li>
+                <li><a href="#page-info" data-icon="info" data-transition="fade">Info</a></li>
+                <li><a href="#page-products" data-icon="arrow-r" data-transition="fade">Products</a></li>
+            </ul>
+        </div>
+	</div>
+    <!--HEADER HEADER HEADER-->
+
+    <!--CONTENT CONTENT CONTENT-->
+	<div data-role="content">	
+		
+        <div class="standard-content">
+            
+            <h2 class="link-color">Device Info</h2>
+            
+            <div class="hr-white"></div>
+
+            <h3 style="text-align:left;">Your data connection type is: </h3>
+            <p id="connection-type" class="yellow">Only available in the KFF mobile app!</p>
+
+        </div>
+        
+	</div>
+    <!--CONTENT CONTENT CONTENT-->
+
+    <!--FOOTER FOOTER FOOTER-->
+    <div data-role="footer" data-position="fixed">
+	    <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#page-news" data-transition="slide">News</a></li>
+                <li><a href="#page-about" data-transition="slide">About</a></li>
+                <li><a href="#page-locations" data-transition="slide">Locations</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--FOOTER FOOTER FOOTER-->
+
+</div><!-- /page -->
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<div data-role="page" id="page-news">
+
+    <!--HEADER HEADER HEADER-->
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#page-home" data-icon="home" data-transition="fade">Home</a></li>
+                <li><a href="#page-info" data-icon="info" data-transition="fade">Info</a></li>
+                <li><a href="#page-products" data-icon="arrow-r" data-transition="fade">Products</a></li>
+            </ul>
+        </div>
+	</div>
+    <!--HEADER HEADER HEADER-->
+
+    <!--CONTENT CONTENT CONTENT-->
+	<div data-role="content">
+        
+        <div class="standard-content">
+            <h3 class="link-color">LATEST NEWS</h3>
+            <p>LA JOLLA, CA. -- Kudler Fine Foods announced plans to create a frequent shopper program for their three stores in Southern California.</p>
+            <img src="images/news.jpg" id="news" alt="Kudler Fine Foods News" title="Kudler Fine Foods News" />
+            <p>Customers that participate in the program will receive news about store events, featured products and sales. In addition, they will be given excluxive offers on select merchandise and discounts on cooking and wine classes. Owner Kathy Kudler says, "We believe this will be a huge benefit to our most loyal customers.</p>
+        </div>
+        
+	</div>
+    <!--CONTENT CONTENT CONTENT-->
+
+    <!--FOOTER FOOTER FOOTER-->
+    <div data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+            <ul>
+                <li><a href="#page-news" data-transition="slide">News</a></li>
+                <li><a href="#page-about" data-transition="slide">About</a></li>
+                <li><a href="#page-locations" data-transition="slide">Locations</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--FOOTER FOOTER FOOTER-->
+
+</div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<div data-role="page" id="page-about">
+
+    <!--HEADER HEADER HEADER-->
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#page-home" data-icon="home" data-transition="fade">Home</a></li>
+                <li><a href="#page-info" data-icon="info" data-transition="fade">Info</a></li>
+                <li><a href="#page-products" data-icon="arrow-r" data-transition="fade">Products</a></li>
+            </ul>
+        </div>
+	</div>
+    <!--HEADER HEADER HEADER-->
+
+    <!--CONTENT CONTENT CONTENT-->
+	<div data-role="content">
+        
+        <div class="standard-content">
+            <h3 class="link-color">ABOUT KUDLER FINE FOODS</h3>
+            <h4>Who We Are</h4>
+            <p>Kudler Fine Foods is a local upscale specialty food store located in the San Diego metropolitan area. We have three locations (La Jolla, Del Mar and Encinitas). Each store has approximately 8,000 square feet of retail space located in a fashionable shopping center. We have the very best domestic and imported fare at every location. Visit one of our locations and browse our fine selection of:</p>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#">Bakery and Pastry Products</a></li>
+                <li><a href="#">Fresh Produce</a></li>
+                <li><a href="#">Fresh Meat & Seafood</a></li>
+                <li><a href="#">Condiments and Packaged Foods</a></li>
+                <li><a href="#">Cheese and Specialty Dairy Products</a></li>
+            </ul>
+            <h4>Our Mission</h4>
+            <p>Our selections, coupled with our experienced, helpful and knowledgeable staff, merge to offer each customer a delightful and pleasing shopping outing.</p>
+            <p>We will provide this service because we "shop the world" for our products; purchase only the finest of products; are highly selective in acquiring our team members; and will go to extensive lengths to assure that Kudler Fine Foods is the purveyor of choice for customers aspiring to purchase the finest epicurean delights.</p>
+            <h4>Our History</h4>
+            <p>Our founder, Kathy Kudler, was the Vice-President of Marketing for a large defense contractor. Weary of the constant travel and the pressures of corporate life, Kathy was looking for other opportunities. As it happened, Kathy relieved her stress through gourmet cooking and on a shopping trip for ingredients for a gourmet meal, she suddenly realized there was an opportunity for an upscale epicurean food shop in La Jolla.</p>
+            <img src="images/kathy.jpg" id="kathy" alt="Kathy Kudler" title="Kathy Kudler" />
+            <p>Kathy developed a business plan, obtained financing and six months later, on June 18, 1998, the first Kudler Fine Foods opened.</p>
+            <p>Within nine months the store was at break-even and was profitable for the year.</p>
+            <p>In 2000, a second store was opened in Del Mar and in 2003 our third shop opened in Encinitas.</p>
+            
+        </div>
+        
+	</div>
+    <!--CONTENT CONTENT CONTENT-->
+
+    <!--FOOTER FOOTER FOOTER-->
+    <div data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+            <ul>
+                <li><a href="#page-news" data-transition="slide">News</a></li>
+                <li><a href="#page-about" data-transition="slide">About</a></li>
+                <li><a href="#page-locations" data-transition="slide">Locations</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--FOOTER FOOTER FOOTER-->
+
+</div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<div data-role="page" id="page-locations">
+
+    <!--HEADER HEADER HEADER-->
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#page-home" data-icon="home" data-transition="fade">Home</a></li>
+                <li><a href="#page-info" data-icon="info" data-transition="fade">Info</a></li>
+                <li><a href="#page-products" data-icon="arrow-r" data-transition="fade">Products</a></li>
+            </ul>
+        </div>
+	</div>
+    <!--HEADER HEADER HEADER-->
+
+    <!--CONTENT CONTENT CONTENT-->
+	<div data-role="content">
+        
+        <div class="standard-content">
+            <h3 class="link-color">OUR LOCATIONS</h3>
+            <h4>DEL MAR</h4>
+            <p>Flower Hill Dr. and San Andres Dr.</p>
+            <p>Curley Commons</p>
+            <p>Suite 146</p>
+            <p>Del Mar, CA 92014</p>
+            <p>(858) 555-0182</p>
+            <p>
+                <a href="https://maps.google.com/maps?q=Del+Mar,+CA&hl=en&sll=32.845486,-117.27047&sspn=0.049683,0.048323&oq=del+mar&hnear=Del+Mar,+San+Diego,+California&t=m&z=14" title="Del Mar on Google Maps">
+                    Map of Del Mar Location
+                </a>
+            </p>
+            <div class="hr-white"></div>
+            
+            <h4>LA JOLLA</h4>
+            <p>Torrey Pines Rd. and Prospect Pl.</p>
+            <p>Rosen Shopping Center</p>
+            <p>La Jolla, CA 92037</p>
+            <p>(858) 555-0138</p>
+            <p>
+                <a href="https://maps.google.com/maps?q=La+Jolla,+San+Diego,+CA&hl=en&ll=32.845486,-117.27047&spn=0.049683,0.048323&sll=39.499761,-111.547028&sspn=5.840078,6.185303&oq=la+joll&hnear=La+Jolla,+San+Diego,+California&t=m&z=14" title="La Jolla on Google Maps">
+                    Map of La Jolla Location
+                </a>
+            </p>
+
+            <div class="hr-white"></div>
+
+            <h4>ENCINITAS</h4>
+            <p>West G St. and 2nd St.</p>
+            <p>Thompson Colonade</p>
+            <p>Encinitas, CA 92024</p>
+            <p>(760) 555-0155</p>
+            <p>
+                <a href="https://maps.google.com/maps?q=Encinitas,+CA&hl=en&sll=32.959489,-117.265315&sspn=0.049619,0.048323&oq=enc&hnear=Encinitas,+San+Diego,+California&t=m&z=12" title="Encinitas on Google Maps">
+                    Map of Encinitas Location
+                </a>
+            </p>
+        </div>
+        
+	</div>
+    <!--CONTENT CONTENT CONTENT-->
+
+    <!--FOOTER FOOTER FOOTER-->
+    <div data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+            <ul>
+                <li><a href="#page-news" data-transition="slide">News</a></li>
+                <li><a href="#page-about" data-transition="slide">About</a></li>
+                <li><a href="#page-locations" data-transition="slide">Locations</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--FOOTER FOOTER FOOTER-->
+
+</div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<div data-role="page" id="page-products">
+    
+    <!--HEADER HEADER HEADER-->
+    <div data-role="header" data-position="fixed">
+        <a href="#page-home" data-icon="home" data-transition="fade">Home</a>
+        <h1>Products</h1>
+        <!--The data-rel="back" option ignores the href attribute and reverses the history of the DOM
+        by one entry, returning the user to the previously loaded page.-->
+        <a href="#" data-rel="back" data-icon="back" data-transition="fade">Back</a>
+	</div>
+    <!--HEADER HEADER HEADER-->
+
+    <!--CONTENT CONTENT CONTENT-->
+	<div data-role="content">
+        
+        <div class="standard-content">
+            Products page coming soon!
+        </div>
+            
+	</div>
+    <!--CONTENT CONTENT CONTENT-->
+
+    <!--FOOTER FOOTER FOOTER-->
+    <div data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+            <ul>
+                <li><a href="#page-news" data-transition="slide">News</a></li>
+                <li><a href="#page-about" data-transition="slide">About</a></li>
+                <li><a href="#page-locations" data-transition="slide">Locations</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--FOOTER FOOTER FOOTER-->
+
+</div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

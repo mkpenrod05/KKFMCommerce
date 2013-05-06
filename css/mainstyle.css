@@ -1,0 +1,65 @@
+﻿body 
+{
+    font-family: Arial, Sans-Serif;
+}
+
+.masthead
+{
+    width:100%;
+    overflow:hidden;
+}
+
+.Image-Logo 
+{
+    border:none;
+    width:150%;
+    position:relative;
+    left:-25%;
+}
+
+#slideshow
+{
+	width:100%;
+	overflow:hidden;
+	/* margin-bottom:42%; */
+}
+
+#slideshow img
+{
+	position:absolute;
+	z-index:8;
+	border:1px solid #ccc;
+}
+#slideshow img.active {
+    z-index:10;
+}
+
+#slideshow img.last-active {
+    z-index:9;
+}
+
+.standard-content 
+{
+    background-color:#000;
+    color:#fff;
+    padding:5px;
+    text-align:center;
+    font-size:14px;
+    font-weight:lighter;
+    text-shadow:none;    
+}
+
+.standard-content h4
+{
+    font-weight:bold;        
+}
+
+.standard-content img { border:1px solid #fff; }
+.standard-content #wine1 { width:90%; max-width:250px; max-height:250px; }
+.standard-content #news { max-width:125px; max-height:59px; }
+.standard-content #kathy { max-width:250px; max-height:376px; }
+
+.link-color { color:#af7964; }
+.yellow { color:Yellow; }
+
+.hr-white { width:95%; border-bottom:1px solid #fff; margin:10px auto; }
