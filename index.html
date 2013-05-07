@@ -37,6 +37,7 @@
         //
         function onDeviceReady() {
             checkConnection();
+            deviceProperties();
         }
 
         
@@ -119,6 +120,24 @@
 
             <h3 style="text-align:left;">Your data connection type is: </h3>
             <p id="connection-type" class="yellow">Only available in the KFF mobile app!</p>
+
+            <h3 style="text-align:left;">Device Name: </h3>
+            <p id="device-name" class="yellow">Unknown</p>
+
+            <h3 style="text-align:left;">Device Cordova: </h3>
+            <p id="device-cordova" class="yellow">Unknown</p>
+
+            <h3 style="text-align:left;">Device Platform: </h3>
+            <p id="device-platform" class="yellow">Unknown</p>
+
+            <h3 style="text-align:left;">Device UUID: </h3>
+            <p id="device-uuid" class="yellow">Unknown</p>
+
+            <h3 style="text-align:left;">Device Model: </h3>
+            <p id="device-model" class="yellow">Unknown</p>
+
+            <h3 style="text-align:left;">Device Version: </h3>
+            <p id="device-version" class="yellow">Unknown</p>
 
         </div>
         

@@ -65,6 +65,15 @@ function checkConnection() {
     $("#connection-type").text(states[networkState]);
 }
 
+function deviceProperties() {
+    $("#device-name").text(device.name);
+    $("#device-cordova").text(device.cordova);
+    $("#device-platform").text(device.platform);
+    $("#device-uuid").text(device.uuid);
+    $("#device-model").text(device.model);
+    $("#device-version").text(device.version);
+}
+
 //function GetProductByType(Type) {
 //    if (Type != "") {
 //        $.ajax({
